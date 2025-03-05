@@ -3,6 +3,7 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 svg {
@@ -47,7 +48,7 @@ g {
     position: relative;
     width: 600px;
     height: 450px;
-    left: 150px;
+    left: -100px;
 }
 
 .titlecontainer2 {
@@ -58,7 +59,7 @@ g {
     width: 600px;
     height: 450px;
     top: -40px;
-    left: -100px;
+    left: 150px;
     z-index: 100;
 
     text-align: center;
