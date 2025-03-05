@@ -65,13 +65,15 @@ g {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .titlecontainer {
     left: 0;
+    top:50px
   }
   .titlecontainer2 {
     height: 50px;
     left: 0;
+    top: 100px;
   }
 }
 
@@ -115,7 +117,7 @@ g {
   font-size: 16px;
 }
 
-.about-me-content p:nth-child(2) {
+.about-me-content p:nth-ctld(2) {
   color: rgb(247, 216, 198);
 }
 
