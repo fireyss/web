@@ -591,6 +591,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://unpkg.com/split-type"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
       const tl = gsap.timeline({
         defaults: { ease: "power4.out", duration: 0.7 },
@@ -727,6 +728,7 @@
 
       let lastUpdate = Date.now();
 
+      // Arrow
       gsap.set("#Arrow", {
         autoAlpha: 1,
         x: "50vw",
@@ -735,6 +737,13 @@
         rotation: 0,
         stagger: 0.05,
       });
+      $('#Arrow').click(function() {
+        if (window.pageYOffset > 5) {
+            window.scrollTo(0, 0)
+        } else {
+            window.scrollTo(0, 6)
+        }
+      })
 
       function onLoop() {
         let now = Date.now();
