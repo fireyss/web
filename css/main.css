@@ -86,6 +86,15 @@ g {
     }
 }
 
+.containercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+    width: 100%;
+    max-width: 1000px;
+}
 .container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
@@ -101,9 +110,6 @@ g {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 5px;
-}
-.container:nth-child(2n) {
-    top: 10%;
 }
 
 @media (max-width: 939px) {
