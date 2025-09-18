@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fireys</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/liquid.css" />
 </head>
 
 
@@ -132,90 +133,16 @@
             </mask>
         </defs>
     </svg>
-    <div class="containercontainer">
-        <div class="container">
-            <h2>About Me</h2>
-            <p style="color: rgb(247, 216, 198)">
-                I am an undergraduate at
-            </p>
-            <p style="color: rgb(198, 247, 228)">
-                My journey in prware development.
-            </p>
-            <p style="color: rgb(156, 188, 218)">
-                I am currently working on a game!
-            </p>
-            <p>
-                When I'm not cod<br>
-            </p>
-        </div>
-        <div class="container">
-            <h2>About Me</h2>
-            <p style="color: rgb(247, 216, 198)">
-                I am an undergraduate at
-            </p>
-            <p style="color: rgb(198, 247, 228)">
-                My journey in prware development.
-            </p>
-            <p style="color: rgb(156, 188, 218)">
-                I am currently working on a game!
-            </p>
-            <p>
-                When I'm not cod
-            </p>
-        </div>
-        <div class="container">
-            <h2>About Me</h2>
-            <p style="color: rgb(247, 216, 198)">
-                I am an undergraduate at
-            </p>
-            <p style="color: rgb(198, 247, 228)">
-                My journey in prware development.
-            </p>
-            <p style="color: rgb(156, 188, 218)">
-                I am currently working on a game!
-            </p>
-            <p>
-                When I'm not cod
-            </p>
-        </div>
-    </div>
-
-    <!-- 
-    <div class="container">
-      <div class="about-me-container">
-        <div class="about-me-content">
-          <img
-            src="images/test.png"
-            alt="Test Image"
-            style="width: 100%; height: auto"
-          />
-        </div>
-      </div>
-    </div> -->
 
     <div class="reveal" id="reveal">
-        <div class="titlecontainer2" style="visibility: hidden">
-            <h1 style="text-align: center; font-size: 80px">Hi!</h1>
-            <section style="text-align: left; font-size: 20px">
-                <section style="color: rgb(247, 216, 198)">Programmer</section>
-                <br />
-                <section style="color: rgb(198, 247, 228)">Developer</section>
-                <br />
-                <section style="color: rgb(156, 188, 218)">Game Designer</section>
-            </section>
-        </div>
         <div class="titlecontainer">
             <img id="Splatter" class="image1" alt="Title" src="images/background.png" class="masked-image" style="
             mask: url(#SplatterMask);
             mask-mode: luminance;
           " />
-            <img id="Title" class="image2" alt="Title" src="images/backgroundorange.png" class="masked-image" style="
-            mask: url(#TitleMask);
-            mask-mode: luminance;
-          " />
 
-            <svg width="100%" height="450" fill="none"
-                style="translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit;">
+            <svg width="100%" height="450" fill="none" class="image2"
+                style="translate: none; rotate: none; opacity: 1; visibility: inherit;">
                 <g class="title" id="Tb">
                     <path
                         d="M55.9042 10.5167L55.8999 10.5156C41.2144 6.75883 29.3742 4.2788 20.3861 3.08038C17.8448 2.74155 14.3609 2.10463 9.92882 1.16711C7.97516 0.742427 6.60092 0.515991 5.85601 0.515991C4.13606 0.515991 2.80527 1.64744 1.82479 3.60839C1.19196 4.87406 0.876007 6.23082 0.876007 7.672C0.876007 9.26016 1.31204 12.462 2.16366 17.2311C5.83111 38.1272 7.66001 54.5205 7.66001 66.424C7.66001 73.4825 7.14976 80.5842 6.12903 87.7293L6.1287 87.7317C5.10691 95.1397 4.58801 99.7038 4.58801 101.368C4.58801 102.15 4.67125 102.805 4.89679 103.256C5.07922 103.62 5.27831 103.929 5.50245 104.154L5.55983 104.211L5.6324 104.247C5.87982 104.371 6.29343 104.465 6.79781 104.549L6.80966 104.551L6.82159 104.553C7.60949 104.645 8.31928 104.57 8.91973 104.283C9.52369 103.994 9.97236 103.512 10.2708 102.873C10.8198 101.859 11.2975 100.197 11.7233 97.9407C12.1539 95.6585 12.5397 92.7192 12.8818 89.1274L12.8818 89.1269C13.5661 81.8557 13.908 73.9892 13.908 65.528V48.9074L18.2497 47.9687L18.2497 47.9688L18.2571 47.967C22.9878 46.8688 28.7077 46.316 35.424 46.316C40.5308 46.316 45.078 46.5288 49.0671 46.9532L49.0724 46.9537C57.087 47.7211 62.2753 48.108 64.608 48.108C65.4285 48.108 66.1034 48.0758 66.6247 48.0078C66.8854 47.9738 67.1176 47.9296 67.3154 47.8722C67.5075 47.8164 67.6979 47.7396 67.852 47.624L67.8583 47.6193L67.8644 47.6144C68.4635 47.1351 68.692 46.3512 68.692 45.432C68.692 44.3973 68.3584 43.5551 67.566 43.0906C67.2028 42.8371 66.6284 42.5881 65.8902 42.335C65.1248 42.0726 64.139 41.7914 62.9373 41.4909L62.9373 41.4908L62.9268 41.4884C59.1072 40.6203 50.8989 40.196 38.368 40.196C32.8595 40.196 28.3692 40.292 24.9003 40.4848C21.4438 40.6768 18.9645 40.9663 17.5004 41.3656L17.4871 41.3693L17.4739 41.3737C15.7791 41.9386 14.432 42.2192 13.4159 42.2424C13.3866 42.0984 13.3504 41.9125 13.3074 41.6836C13.1907 41.0631 13.0259 40.1404 12.8126 38.9143C12.3863 36.4628 11.7678 32.8057 10.9573 27.9421C9.93337 21.7561 9.16575 17.0011 8.65419 13.676C8.39837 12.0131 8.20691 10.71 8.07952 9.76518C7.94978 8.8029 7.89201 8.24938 7.89201 8.05599C7.89201 7.97524 7.89373 7.90395 7.89673 7.8414L7.93837 7.86916L8.00189 7.89033C8.13637 7.93516 8.2563 7.97146 8.35873 7.99707C8.42544 8.01374 8.50323 8.0308 8.58168 8.039C9.78135 8.39413 12.7564 8.86243 17.442 9.44814L17.445 9.4485C26.0299 10.4685 37.6094 12.8938 52.1928 16.7315L52.1927 16.7317L52.2039 16.7343C55.0656 17.4177 57.3772 17.9315 59.1363 18.2747C60.8801 18.615 62.1206 18.796 62.816 18.796C63.6966 18.796 64.4564 18.6273 64.9426 18.1562C65.9495 17.3264 66.516 16.3476 66.516 15.224C66.516 14.4687 66.2718 13.8176 65.7519 13.325C65.2466 12.8464 64.5293 12.5634 63.6644 12.4265C62.6678 12.2601 60.0922 11.6278 55.9042 10.5167ZM7.94428 7.49907C7.94429 7.49909 7.94405 7.49968 7.94352 7.50078L7.94428 7.49907Z"
@@ -247,10 +174,19 @@
                         fill="#ED7B31" stroke="#ED7B31" />
                 </g>
             </svg>
+
+            <img id="Title" class="image2" alt="Title" src="images/backgroundorange.png" class="masked-image" style="
+            mask: url(#TitleMask);
+            mask-mode: luminance;
+          " />
+
         </div>
+        <div class="fuzzyoverlay material glass"></div>
+        <div class="vhs"></div>
+        
     </div>
 
-    <svg id="Arrow" height="100" width="100" viewBox="0 0 24 24" style="
+    <!-- <svg id="Arrow" height="100" width="100" viewBox="0 0 24 24" style="
         visibility: hidden;
         z-index: 101;
         cursor: pointer;
@@ -259,14 +195,11 @@
         mix-blend-mode: difference;
       ">
         <path fill="white" d="M7 10l5 5 5-5H7z" />
-    </svg>
+    </svg> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/splittype.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script>
         const tl = gsap.timeline({
             defaults: { ease: "power4.out", duration: 0.7 },
@@ -443,22 +376,22 @@
         let revealed = window.pageYOffset > 5
         let lastrevealed = revealed
 
-        function toggleReveal() {
-            if (revealed) {
-                gsap.to(".container", {
-                    y: "0",
-                    autoAlpha: 1,
-                    stagger: 0.2,
-                })
-            }
-            else {
-                gsap.to(".container", {
-                    y: "50%",
-                    autoAlpha: 0,
-                })
-            }
-        }
-        toggleReveal()
+        // function toggleReveal() {
+        //     if (revealed) {
+        //         gsap.to(".container", {
+        //             y: "0",
+        //             autoAlpha: 1,
+        //             stagger: 0.2,
+        //         })
+        //     }
+        //     else {
+        //         gsap.to(".container", {
+        //             y: "50%",
+        //             autoAlpha: 0,
+        //         })
+        //     }
+        // }
+        // toggleReveal()
 
         function onLoop() {
             let now = Date.now();

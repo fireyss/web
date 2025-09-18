@@ -1,0 +1,134 @@
+/* MIT License
+
+Copyright (c) 2023 Brandon Jordan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
+
+.material {
+    transition: 0.3s ease all;
+    background-blend-mode: darken;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        padding: 0.08rem;
+        border-radius: 0.75rem;
+        background: linear-gradient(332deg, rgba(255, 255, 255, 0.1) 1%, rgba(217, 217, 217, 0.3) 23%, rgba(222, 222, 222, 0.3) 73%, rgba(255, 255, 255, 0.1) 100%);
+        mask: linear-gradient(#000000 0 0) exclude,
+            linear-gradient(#000000 0 0) content-box;
+        filter: brightness(110%);
+        backdrop-filter: url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"refract\" x=\"0\" y=\"0\" width=\"110%\" height=\"110%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"15\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+            <feTurbulence baseFrequency=\"0.01,0.001\" result=\"feTurbulence-814c3d2\"/>\
+            <feDisplacementMap scale=\"15\" xChannelSelector=\"R\" yChannelSelector=\"B\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"feGaussianBlur-a95d582b\" in2=\"feTurbulence-814c3d2\"/>\
+            </filter>\
+        </defs></svg>#refract");
+    }
+
+    &.glass {
+        scale: 1;
+        background-color: rgba(243, 243, 243, 0.1);
+        backdrop-filter: url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"chromatic-aberration\" color-interpolation-filters=\"sRGB\">\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"1\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"1\" result=\"redChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feGaussianBlur stdDeviation=\"0.5\" result=\"greenChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0\" />\
+        <feGaussianBlur stdDeviation=\"1\" result=\"blueChannel\"/>\
+        <feOffset dx=\"1\" dy=\"0\"/>\
+        <feBlend in=\"redChannel\" in2=\"greenChannel\" mode=\"screen\" result=\"redGreen\" />\
+        <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
+        </filter>\
+        </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"refract\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
+            <feTurbulence baseFrequency=\"0.001 0.001\" result=\"feTurbulence-8334c3d2\"/>\
+            <feDisplacementMap type=\"fractalNoise\" numOctaves=\"1\" seed=\"5\" stitchTiles=\"stitch\" baseFrequency=\"0.008\" scale=\"5\" xChannelSelector=\"R\" yChannelSelector=\"G\" in=\"SourceGraphic\" in2=\"feTurbulence-8334c3d2\"/>\
+            </filter>\
+        </defs></svg>#refract") saturate(150%);
+    }
+
+    &.ice,
+    &.black-ice {
+        backdrop-filter: url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"chromatic-aberration\" color-interpolation-filters=\"sRGB\">\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"2\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"2\" result=\"redChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0\" />\
+        <feOffset dx=\"2\" dy=\"0\"/>\
+        <feGaussianBlur stdDeviation=\"0.5\" result=\"greenChannel\"/>\
+        <feColorMatrix in=\"SourceGraphic\" type=\"matrix\" values=\"0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0\" />\
+        <feGaussianBlur stdDeviation=\"2\" result=\"blueChannel\"/>\
+        <feBlend in=\"redChannel\" in2=\"greenChannel\" mode=\"screen\" result=\"redGreen\" />\
+        <feBlend in=\"redGreen\" in2=\"blueChannel\" mode=\"screen\"/>\
+        </filter>\
+        </defs></svg>#chromatic-aberration") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"refract\" x=\"0\" y=\"0\" width=\"110%\" height=\"110%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"1,5\" edgeMode=\"wrap\" result=\"feGaussianBlur-a95d582b\"/>\
+            <feGaussianBlur in=\"feGaussianBlur-a95d582b\" stdDeviation=\"5,1\" edgeMode=\"wrap\" result=\"feGaussianBlur-8384c3d2\"/>\
+            <feTurbulence baseFrequency=\"0.01,0.001\" result=\"feTurbulence-814c3d2\"/>\
+            <feDisplacementMap scale=\"5\" xChannelSelector=\"R\" yChannelSelector=\"B\" result=\"65d8088a-cd06-4721-b9d8-50e84ab39476\" in=\"feGaussianBlur-8384c3d2\" in2=\"feTurbulence-814c3d2\"/>\
+            </filter>\
+        </defs></svg>#refract") url("data:image/svg+xml,\<svg xmlns=\"http://www.w3.org/2000/svg\"><defs>\
+            <filter id=\"reflect\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" filterUnits=\"objectBoundingBox\" primitiveUnits=\"userSpaceOnUse\">\
+            <feTurbulence type=\"fractalNoise\" numOctaves=\"1\" seed=\"5\" stitchTiles=\"stitch\" baseFrequency=\"0.001 0.01\" result=\"feTurbulence-3ec91c54\"></feTurbulence>\
+            <feDisplacementMap in=\"SourceGraphic\" in2=\"feTurbulence-3ec91c54\" scale=\"120\" xChannelSelector=\"R\" yChannelSelector=\"G\" result=\"feDisplacementMap-d9783c91\"></feDisplacementMap>\
+            <feGaussianBlur stdDeviation=\"15 0\" edgeMode=\"wrap\" result=\"feGaussianBlur-1c78025c\"></feGaussianBlur>\
+            <feGaussianBlur stdDeviation=\"0 15\" edgeMode=\"wrap\" result=\"feGaussianBlur-8c23ff82\"></feGaussianBlur>\
+            <feComposite in=\"feDisplacementMap-d9783c91\" in2=\"SourceGraphic\" operator=\"xor\" result=\"feComposite-ea7bd98b\"></feComposite>\
+            <feComposite in=\"feGaussianBlur-8c23ff82\" in2=\"feGaussianBlur-1c78025c\" operator=\"xor\" result=\"feComposite-4f98e060\"></feComposite>\
+            <feComposite in=\"SourceGraphic\" in2=\"feComposite-ea7bd98b\" operator=\"atop\" result=\"feComposite-628218f3\"></feComposite>\
+            <feComposite in=\"feComposite-628218f3\" in2=\"feComposite-4f98e060\" operator=\"atop\" result=\"feComposite-196f967f\"></feComposite>\
+            <feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"3\" result=\"frosted\"></feGaussianBlur>\
+            <feComposite in2=\"frosted\" in=\"feComposite-196f967f\" operator=\"over\"></feComposite>\
+        </filter>\
+        </defs></svg>#reflect") saturate(180%);
+    }
+
+    &.ice {
+        background-color: rgba(224, 233, 253, 0.7);
+    }
+
+    &.black-ice {
+        background-color: rgba(48, 49, 55, 0.7);
+    }
+
+    .interactive {
+        transition: all 0.3s;
+
+        &:hover {
+            filter: brightness(120%);
+            transition: all 0.3s;
+        }
+
+        &:focus {
+            box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, .3);
+            transition: all 0.3s;
+        }
+    }
+}
